@@ -23,67 +23,79 @@
         android:layout_height="0dp"
         android:layout_weight="8.47"
         android:orientation="horizontal"
-        android:paddingTop="100dp">
+        android:paddingTop="50dp"
+        android:baselineAligned="false" >
 
          <LinearLayout
+             android:id="@+id/LeftSide"
              android:orientation="vertical"
              android:layout_width="0dp"
              android:layout_weight="1"
              android:layout_height="match_parent">
 
              <Button
-                 android:text="+"
+                 android:text="@string/plus"
                  android:gravity="center"
                  android:layout_width="match_parent"
-                 android:layout_height="wrap_content" />
+                 android:layout_height="wrap_content"
+                 android:onClick="upLeft" />
 
              <TextView
-                 android:text="20"
+                 android:id="@+id/counterLeft"
                  android:gravity="center"
+                 android:textSize="50sp"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content" />
 
              <Button
-                 android:text="-"
+                 android:text="@string/minus"
                  android:gravity="center"
                  android:layout_width="match_parent"
-                 android:layout_height="wrap_content" />
+                 android:layout_height="wrap_content"
+                 android:onClick="downLeft" />
 
          </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/RightSide"
             android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent" >
 
             <Button
-                android:text="+"
+                android:text="@string/plus"
                 android:gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:onClick="upRight" />
 
             <TextView
-                android:text="20"
+                android:id="@+id/counterRight"
                 android:gravity="center"
+                android:textSize="50sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <Button
-                android:text="-"
+                android:text="@string/minus"
                 android:gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:onClick="downRight" />
 
         </LinearLayout>
 
     </LinearLayout>
 
     <ImageButton
-        android:drawable="@drawable/dice"
-        android:layout_width="match_parent"
+        android:src="@drawable/dice"
+        android:contentDescription="@string/d20_die"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
-
+        android:layout_weight="3"
+        android:scaleType="fitCenter"
+        android:onClick="reset"/>
 
 </LinearLayout>

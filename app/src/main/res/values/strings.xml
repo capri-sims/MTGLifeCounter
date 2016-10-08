@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MTG Life Counter</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="twenty">20</string>
+    <string name="d20_die">D20 Die</string>
+
 </resources>
